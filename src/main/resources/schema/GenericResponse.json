@@ -1,0 +1,19 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "GenericResponse",
+  "type": "object",
+  "properties": {
+    "fresh": {
+      "$ref": "#/definitions/fruit"
+    },
+    "spoil":{
+      "$ref": "#/definitions/fruit"
+    }
+  },
+  "definitions": {
+    "fruit": {
+      "description": "Fruit enum in separate class",
+      "enum": ["Apple", "Banana", "Cherry"]
+    }
+  }
+}
