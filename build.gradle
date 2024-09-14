@@ -1,0 +1,21 @@
+plugins {
+    id 'java'
+    id 'org.jsonschema2pojo' version('1.2.1')
+}
+
+group 'org.js2p'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+jsonSchema2Pojo {
+    setSource(files("$projectDir/src/main/resources/schema"))
+    targetPackage = "my.pkg"
+    generateBuilders = true
+}
+
+dependencies {
+    implementation 'com.fasterxml.jackson.core:jackson-databind:2.17.2'
+}
